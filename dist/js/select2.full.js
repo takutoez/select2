@@ -2158,14 +2158,14 @@ S2.define('select2/selection/search',[
     this.$selection.find('.select2-selection__rendered')
                    .append(this.$searchContainer);
 
-    this.resizeSearch();
+    //this.resizeSearch();
     if (searchHadFocus) {
       this.$search.trigger('focus');
     }
   };
 
   Search.prototype.handleSearch = function () {
-    this.resizeSearch();
+    //this.resizeSearch();
 
     if (!this._keyUpPrevented) {
       var input = this.$search.val();
