@@ -1805,7 +1805,7 @@ S2.define('select2/selection/search',[
   Search.prototype.render = function (decorated) {
     var $search = $(
       '<li class="select2-search select2-search--inline">' +
-        '<input class="select2-search__field" type="search" tabindex="-1"' +
+        '<input class="select2-search__field" tabindex="-1"' +
         ' autocomplete="off" autocorrect="off" autocapitalize="off"' +
         ' spellcheck="false" role="textbox" aria-autocomplete="list" />' +
       '</li>'
@@ -1968,14 +1968,14 @@ S2.define('select2/selection/search',[
     this.$selection.find('.select2-selection__rendered')
                    .append(this.$searchContainer);
 
-    this.resizeSearch();
+    //this.resizeSearch();
     if (searchHadFocus) {
       this.$search.focus();
     }
   };
 
   Search.prototype.handleSearch = function () {
-    this.resizeSearch();
+    //this.resizeSearch();
 
     if (!this._keyUpPrevented) {
       var input = this.$search.val();
@@ -3827,7 +3827,7 @@ S2.define('select2/dropdown/search',[
 
     var $search = $(
       '<span class="select2-search select2-search--dropdown">' +
-        '<input class="select2-search__field" type="search" tabindex="-1"' +
+        '<input class="select2-search__field" tabindex="-1"' +
         ' autocomplete="off" autocorrect="off" autocapitalize="off"' +
         ' spellcheck="false" role="textbox" />' +
       '</span>'
@@ -5056,11 +5056,11 @@ S2.define('select2/core',[
   Select2.prototype._placeContainer = function ($container) {
     $container.insertAfter(this.$element);
 
-    var width = this._resolveWidth(this.$element, this.options.get('width'));
+    /*var width = this._resolveWidth(this.$element, this.options.get('width'));
 
     if (width != null) {
       $container.css('width', width);
-    }
+    }*/
   };
 
   Select2.prototype._resolveWidth = function ($element, method) {
